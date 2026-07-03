@@ -12,7 +12,7 @@
 - `skills/harness-inspect/` — **점검**: 프로젝트의 하네스 부품을 찾아 `guides/` 기준으로 점검하고 오프라인 HTML 대시보드 리포트를 생성하는 스킬. 런타임별 탐지 지식은 `references/`에, 리포트 생성은 `scripts/`(렌더러 + 데이터 계약)에 분리되어 있다.
 - `fixtures/` — harness-inspect 검증용 가짜 프로젝트들 + 정답지(`answers.md`). 스킬의 탐지·묶기·판정 동작을 바꾸면 반드시 이걸로 회귀 검증한다.
 - `reports/` — 이 저장소를 스스로 점검했을 때의 리포트 산출물(재생성 가능, 버전 관리 대상 아님).
-- `docs/` — 이 저장소를 관리·릴리스하는 컨벤션(버전 관리·Git).
+- `docs/` — 저장소 관리 컨벤션을 주제별로 분리: `versioning.md`·`git.md`·`feedback.md`.
 
 ## 작업 원칙
 
