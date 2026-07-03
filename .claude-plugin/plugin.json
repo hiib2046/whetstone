@@ -1,6 +1,5 @@
 {
   "name": "whetstone",
-  "version": "0.1.0",
   "description": "좋은 스킬·에이전트·하네스가 무엇인지 기준으로 정하고, 그 기준에 맞춰 만들고 점검하는 플러그인 (설계 품질 중심)",
   "author": {
     "name": "hiib2046"
