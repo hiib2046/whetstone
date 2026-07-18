@@ -10,11 +10,11 @@
 
 남들이 설치해 쓰기 시작하면 `plugin.json`에 `version`(`MAJOR.MINOR.PATCH`)을 넣어 릴리스를 통제한다. 단일 출처는 `plugin.json` 하나 — `marketplace.json`엔 버전을 적지 않는다(두 곳을 맞추다 어긋나는 실수 방지).
 
-이 플러그인의 "제품"은 가이드 + 두 스킬(craft·inspect)이므로 각 자리의 의미는:
+이 플러그인의 "제품"은 가이드 + `harness-craft` 스킬이므로 각 자리의 의미는:
 
-- **MAJOR** — 기존 사용법이 깨지는 변경. 스킬 이름·호출 방식 변경, 리포트 데이터 계약(`skills/harness-inspect/scripts/report-data.md`)의 하위호환 깨짐, 가이드 구조를 갈아엎어 craft·inspect의 판정 결과가 달라짐.
-- **MINOR** — 하위호환되는 추가. 새 가이드·스킬·런타임 reference 추가, 새 점검 항목.
-- **PATCH** — 판정·동작을 바꾸지 않는 수정. 문구 다듬기, 스크립트 버그 픽스, 오타.
+- **MAJOR** — 기존 사용법이 깨지는 변경. 스킬 이름·호출 방식 변경, 가이드 구조를 갈아엎어 `harness-craft`의 결과가 달라짐.
+- **MINOR** — 하위호환되는 추가. 새 가이드·스킬·원칙 추가.
+- **PATCH** — 가이드 적용 결과를 바꾸지 않는 수정. 문구 다듬기, 오타.
 
 커밋 타입과의 연결은 [git.md](git.md) 참조(`feat`→MINOR, `fix`→PATCH, `BREAKING CHANGE`→MAJOR).
 

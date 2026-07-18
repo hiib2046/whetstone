@@ -1,5 +1,2 @@
-# 점검 리포트 산출물 — 다시 스캔하면 재생성됨 (AGENTS.md 참조)
-reports/
-
 # 런타임 로컬 설정 (사용자별 권한·플러그인 활성화 상태)
 .claude/settings.local.json
