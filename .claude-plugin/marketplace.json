@@ -1,5 +1,6 @@
 {
   "name": "whetstone",
+  "description": "Whetstone 플러그인을 배포하는 마켓플레이스",
   "owner": {
     "name": "hiib2046"
   },

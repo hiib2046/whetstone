@@ -1,31 +1,34 @@
 # 버전 관리
 
-## 지금: `version` 필드 없음 (활발한 개발 단계)
+## 단일 제품 버전
 
-`.claude-plugin/plugin.json`에 `version`을 **두지 않는다.** 그러면 Claude Code가 git 커밋 SHA로 버전을 판단해 **커밋할 때마다 새 버전으로 인식**한다 — 설치본에서 `/plugin marketplace update whetstone` 한 번이면 최신이 된다(수동 bump 불필요). 혼자 빠르게 고치는 지금 단계에 맞는 설정이다.
+가이드와 `harness-craft` 스킬은 두 런타임이 공유하는 하나의 제품이다. 따라서 아래 두 매니페스트에 같은 SemVer(`MAJOR.MINOR.PATCH`)를 기록하고 한 릴리스에서 함께 올린다.
 
-`version`을 박아 두면 그 숫자를 올리기 전엔 커밋을 push해도 설치본이 업데이트되지 않는다. 그 통제가 필요 없는 단계라 아예 뺀다.
+- Claude Code: `.claude-plugin/plugin.json`
+- Codex: `.codex-plugin/plugin.json`
 
-## 나중: 정식 배포 단계로 가면 SemVer 도입
+현재 버전은 `0.1.0`이다. 런타임별 패키징만 고친 경우에도 제품의 PATCH 버전을 함께 올리며, Claude Code용과 Codex용 버전을 따로 운영하지 않는다. 마켓플레이스 정의에는 버전을 중복해서 적지 않는다.
 
-남들이 설치해 쓰기 시작하면 `plugin.json`에 `version`(`MAJOR.MINOR.PATCH`)을 넣어 릴리스를 통제한다. 단일 출처는 `plugin.json` 하나 — `marketplace.json`엔 버전을 적지 않는다(두 곳을 맞추다 어긋나는 실수 방지).
-
-이 플러그인의 "제품"은 가이드 + `harness-craft` 스킬이므로 각 자리의 의미는:
+## SemVer 기준
 
 - **MAJOR** — 기존 사용법이 깨지는 변경. 스킬 이름·호출 방식 변경, 가이드 구조를 갈아엎어 `harness-craft`의 결과가 달라짐.
-- **MINOR** — 하위호환되는 추가. 새 가이드·스킬·원칙 추가.
-- **PATCH** — 가이드 적용 결과를 바꾸지 않는 수정. 문구 다듬기, 오타.
+- **MINOR** — 하위 호환되는 추가. 새 가이드·스킬·원칙 추가.
+- **PATCH** — 기존 사용법을 유지하는 수정. 문구 다듬기, 오타, 런타임별 패키징 수정.
 
 커밋 타입과의 연결은 [git.md](git.md) 참조(`feat`→MINOR, `fix`→PATCH, `BREAKING CHANGE`→MAJOR).
 
-### 릴리스 절차 (SemVer 도입 후)
+## 로컬 개발
 
-1. `plugin.json`의 `version`을 SemVer 규칙대로 올린다.
-2. `chore(plugin): vX.Y.Z` 커밋 후 `git push`.
-3. `git tag vX.Y.Z && git push --tags`.
+Codex에서 재설치를 강제하기 위한 build metadata(`0.1.0+codex.local...`)는 로컬 테스트용 사본에만 쓴다. 저장소의 두 매니페스트에는 정식 버전을 유지하고, 저장소를 직접 테스트했다면 커밋 전에 두 값이 다시 같은지 확인한다.
 
-태그가 있으면 사용자가 특정 버전을 고정해 설치할 수 있다:
+## 릴리스 절차
 
-```
-/plugin marketplace add hiib2046/whetstone@v0.2.0
+1. 변경 성격에 맞는 다음 버전을 정한다.
+2. 두 `plugin.json`의 `version`을 같은 값으로 수정한다.
+3. Claude Code·Codex 플러그인 검증과 스킬 검증을 실행한다.
+4. `chore(plugin): vX.Y.Z` 커밋 후 push하고 같은 이름의 태그를 만든다.
+
+```powershell
+git tag vX.Y.Z
+git push origin vX.Y.Z
 ```

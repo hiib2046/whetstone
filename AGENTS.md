@@ -7,6 +7,8 @@
 
 구성:
 
+- `.claude-plugin/` — Claude Code용 플러그인 매니페스트와 마켓플레이스 정의.
+- `.codex-plugin/` — Codex용 플러그인 매니페스트. Claude Code용 매니페스트와 같은 제품 버전을 쓴다.
 - `guides/` — **기준**: "좋은 게 뭔지 + 왜 + 점검 질문" (common·skill·agent·harness). `harness-craft`가 사용하는 단일 잣대다.
 - `skills/harness-craft/` — **제작**: 스킬·에이전트·훅 등 하네스 부품을 새로 만들거나 고칠 때 `guides/` 원칙을 적용하고 점검 질문으로 자가 점검하는 스킬.
 - `docs/` — 저장소 관리 컨벤션을 주제별로 분리: `versioning.md`·`git.md`·`feedback.md`.
@@ -15,4 +17,5 @@
 
 - **가이드의 독자는 사람이 아니라 LLM이다.** 새 스킬·에이전트·하네스를 **만들 때 적용하고 자가 점검하는 기준**이다. 그래서 "사람이 훑기 좋게 짧게"가 아니라 **LLM이 흔들림 없이 만들고 판정하도록** 쓴다.
 - **가이드의 원칙 한 블록 = `정의·왜 → 점검 질문`.**
+- **제품 버전은 하나다.** `.claude-plugin/plugin.json`과 `.codex-plugin/plugin.json`의 `version`을 같은 값으로 함께 올린다.
 - 플러그인 자기 동작 스크립트는 Node.js(`.mjs`). (전역 규칙 따름)
