@@ -7,7 +7,7 @@
 - Claude Code: `.claude-plugin/plugin.json`
 - Codex: `.codex-plugin/plugin.json`
 
-현재 버전은 `0.2.0`이다. 런타임별 패키징만 고친 경우에도 제품의 PATCH 버전을 함께 올리며, Claude Code용과 Codex용 버전을 따로 운영하지 않는다. 마켓플레이스 정의에는 버전을 중복해서 적지 않는다.
+현재 버전은 `1.0.0`이다. 런타임별 패키징만 고친 경우에도 제품의 PATCH 버전을 함께 올리며, Claude Code용과 Codex용 버전을 따로 운영하지 않는다. 마켓플레이스 정의에는 버전을 중복해서 적지 않는다.
 
 ## SemVer 기준
 
