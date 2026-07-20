@@ -1,5 +1,5 @@
 ---
-name: harness-craft
+name: craft-harness
 description:
   새 스킬·에이전트·훅, 이들의 동작 스크립트 또는 이를 엮는 하네스를 설계·생성·수정할 때 Whetstone 설계 가이드와 자가 점검을 적용하는 품질 레이어.
   skill-creator 등 다른 생성 스킬이 절차를 주도하는 요청에도 함께 사용한다. 읽기 전용 설명·검토·진단에는 사용하지 않는다.

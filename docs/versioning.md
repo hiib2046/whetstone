@@ -2,7 +2,7 @@
 
 ## 단일 제품 버전
 
-가이드와 `harness-craft` 스킬은 두 런타임이 공유하는 하나의 제품이다. 따라서 아래 두 매니페스트에 같은 SemVer(`MAJOR.MINOR.PATCH`)를 기록하고 한 릴리스에서 함께 올린다.
+가이드와 `craft-harness` 스킬은 두 런타임이 공유하는 하나의 제품이다. 따라서 아래 두 매니페스트에 같은 SemVer(`MAJOR.MINOR.PATCH`)를 기록하고 한 릴리스에서 함께 올린다.
 
 - Claude Code: `.claude-plugin/plugin.json`
 - Codex: `.codex-plugin/plugin.json`
@@ -11,7 +11,7 @@
 
 ## SemVer 기준
 
-- **MAJOR** — 기존 사용법이 깨지는 변경. 스킬 이름·호출 방식 변경, 가이드 구조를 갈아엎어 `harness-craft`의 결과가 달라짐.
+- **MAJOR** — 기존 사용법이 깨지는 변경. 스킬 이름·호출 방식 변경, 가이드 구조를 갈아엎어 `craft-harness`의 결과가 달라짐.
 - **MINOR** — 하위 호환되는 추가. 새 가이드·스킬·원칙 추가.
 - **PATCH** — 기존 사용법을 유지하는 수정. 문구 다듬기, 오타, 런타임별 패키징 수정.
 

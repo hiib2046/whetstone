@@ -1,0 +1,4 @@
+interface:
+  display_name: "런타임 중립 플러그인 제작"
+  short_description: "다중 AI 런타임용 플러그인 구조를 제작·전환·점검"
+  default_prompt: "$craft-runtime-neutral-plugin을 사용해 이 플러그인을 런타임 중립 구조로 만들어줘."

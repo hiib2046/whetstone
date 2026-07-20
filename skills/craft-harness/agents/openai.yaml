@@ -1,0 +1,4 @@
+interface:
+  display_name: "하네스 제작"
+  short_description: "Whetstone 기준으로 스킬·에이전트·훅을 제작·수정"
+  default_prompt: "$craft-harness를 사용해 이 하네스 부품을 설계하고 만들어줘."

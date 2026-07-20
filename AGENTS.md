@@ -9,8 +9,9 @@
 
 - `.claude-plugin/` — Claude Code용 플러그인 매니페스트와 마켓플레이스 정의.
 - `.codex-plugin/` — Codex용 플러그인 매니페스트. Claude Code용 매니페스트와 같은 제품 버전을 쓴다.
-- `guides/` — **기준**: "좋은 게 뭔지 + 왜 + 점검 질문" (common·skill·agent·harness·script). `harness-craft`가 사용하는 단일 잣대다.
-- `skills/harness-craft/` — **제작**: 스킬·에이전트·훅 등 하네스 부품을 새로 만들거나 고칠 때 `guides/` 원칙을 적용하고 점검 질문으로 자가 점검하는 스킬.
+- `guides/` — **기준**: "좋은 게 뭔지 + 왜 + 점검 질문" (common·skill·agent·harness·script·runtime-neutral-plugin). `craft-harness`와 전용 제작 스킬이 사용하는 단일 잣대다.
+- `skills/craft-harness/` — **제작**: 스킬·에이전트·훅 등 하네스 부품을 새로 만들거나 고칠 때 `guides/` 원칙을 적용하고 점검 질문으로 자가 점검하는 스킬.
+- `skills/craft-runtime-neutral-plugin/` — **런타임 중립 플러그인**: 새로 제작하거나 기존 플러그인을 전환·점검할 때 전용 가이드를 적용하는 스킬.
 - `docs/` — 저장소 관리 컨벤션을 주제별로 분리: `versioning.md`·`git.md`·`feedback.md`.
 
 ## 작업 원칙
